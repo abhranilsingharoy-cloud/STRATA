@@ -6,17 +6,18 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { href: '/studio', label: 'Studio' },
-  { href: '/services', label: 'Services' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/journal', label: 'Journal' },
-  { href: '/team', label: 'Team' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/studio', label: 'Studio', image: '/images/portrait_1.jpg' },
+  { href: '/services', label: 'Services', image: '/images/abstract_detail.jpg' },
+  { href: '/projects', label: 'Projects', image: '/images/exterior_hero.jpg' },
+  { href: '/journal', label: 'Journal', image: '/images/interior_kitchen.jpg' },
+  { href: '/team', label: 'Team', image: '/images/portrait_2.jpg' },
+  { href: '/contact', label: 'Contact', image: '/images/exterior_tower.jpg' },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -80,9 +81,29 @@ export default function Header() {
             animate={{ y: 0 }}
             exit={{ y: '-100%' }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-[#0B0B0C] flex flex-col justify-center px-10 md:px-20"
+            className="fixed inset-0 z-40 bg-[#0B0B0C] flex flex-col justify-center px-10 md:px-20 overflow-hidden"
           >
-            <nav aria-label="Primary navigation">
+            {/* Hover Background Images */}
+            {navLinks.map((link, i) => (
+              <motion.div
+                key={`bg-${link.href}`}
+                className="absolute inset-0 z-0 pointer-events-none"
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ 
+                  opacity: hoveredIndex === i ? 0.4 : 0,
+                  scale: hoveredIndex === i ? 1 : 1.05
+                }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <img
+                  src={link.image}
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            ))}
+
+            <nav aria-label="Primary navigation" className="relative z-10">
               <ul className="space-y-2">
                 {navLinks.map((link, i) => (
                   <motion.li
@@ -95,7 +116,9 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
-                      className="block text-white font-display text-5xl md:text-7xl uppercase tracking-tight hover:text-accent transition-colors duration-200"
+                      onMouseEnter={() => setHoveredIndex(i)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                      className="inline-block text-white font-display text-5xl md:text-7xl uppercase tracking-tight hover:translate-x-4 transition-transform duration-300"
                     >
                       {link.label}
                     </Link>
