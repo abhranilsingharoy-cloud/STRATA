@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import RevealText from '@/components/ui/RevealText';
+import ParallaxImage from '@/components/ui/ParallaxImage';
+import Button from '@/components/ui/Button';
 
 // IntroStatement — mirrors Doorly screenshot 5:
 // Full-bleed photo behind, dark semi-transparent panel left (headline),
@@ -12,10 +15,12 @@ export default function IntroStatement() {
     <section className="relative w-full min-h-screen overflow-hidden" aria-label="Studio introduction">
       {/* Full-bleed background photo */}
       <div className="absolute inset-0">
-        <img
+        <ParallaxImage
           src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920&q=80"
           alt="Architect-designed interior with floor-to-ceiling glass walls and mountain views"
           className="w-full h-full object-cover object-center"
+          scale={1.15}
+          speed={0.3}
         />
       </div>
 
@@ -33,7 +38,10 @@ export default function IntroStatement() {
             className="font-display font-black text-white uppercase leading-none"
             style={{ fontSize: 'clamp(2.5rem, 5.5vw, 6.5rem)', letterSpacing: '-0.02em' }}
           >
-            LEADING THE INDUSTRY WITH A CLIENT-FIRST FOCUS
+            <RevealText>LEADING THE</RevealText><br />
+            <RevealText delay={0.1}>INDUSTRY WITH</RevealText><br />
+            <RevealText delay={0.2}>A CLIENT-FIRST</RevealText><br />
+            <RevealText delay={0.3}>FOCUS</RevealText>
           </h2>
         </motion.div>
 
@@ -46,19 +54,16 @@ export default function IntroStatement() {
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="text-white font-body text-base leading-relaxed mb-10 max-w-[300px]">
-            We craft inspiring spaces that blend cutting-edge design with enduring functionality,
-            turning your vision into reality.
+            <RevealText>We craft inspiring spaces that blend</RevealText>{' '}
+            <RevealText delay={0.1}>cutting-edge design with enduring</RevealText>{' '}
+            <RevealText delay={0.2}>functionality, turning your vision</RevealText>{' '}
+            <RevealText delay={0.3}>into reality.</RevealText>
           </p>
-          <Link
+          <Button
             href="/contact"
-            className="inline-flex items-center self-start bg-white text-black text-xs font-semibold tracking-widest uppercase h-[52px]"
-            aria-label="Contact STRATA"
-          >
-            <span className="px-6">CONTACT</span>
-            <span className="flex items-center justify-center w-[52px] h-[52px] bg-black">
-              <ArrowRight size={16} strokeWidth={2.5} color="#fff" />
-            </span>
-          </Link>
+            label="CONTACT"
+            className="self-start bg-white text-black"
+          />
         </motion.div>
       </div>
 
@@ -67,15 +72,10 @@ export default function IntroStatement() {
         <p className="text-white text-sm leading-relaxed mb-6">
           We craft inspiring spaces that blend cutting-edge design with enduring functionality.
         </p>
-        <Link
+        <Button
           href="/contact"
-          className="inline-flex items-center bg-black text-white text-xs font-semibold tracking-widest uppercase h-[48px]"
-        >
-          <span className="px-5">CONTACT</span>
-          <span className="flex items-center justify-center w-12 h-12">
-            <ArrowRight size={14} />
-          </span>
-        </Link>
+          label="CONTACT"
+        />
       </div>
     </section>
   );

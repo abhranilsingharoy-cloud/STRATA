@@ -34,18 +34,24 @@ export default function Button({
   const inner = isChipOnly ? (
     <span
       className={cn(
-        'arrow-chip w-12 h-12 flex items-center justify-center bg-accent text-black',
+        'group arrow-chip w-12 h-12 flex items-center justify-center bg-accent text-black relative overflow-hidden',
         className
       )}
       aria-label={ariaLabel || label}
     >
-      <ArrowRight size={18} strokeWidth={2.5} />
+      <div className="flex relative w-full h-full items-center justify-center">
+        <ArrowRight size={18} strokeWidth={2.5} className="absolute transition-transform duration-300 ease-in-out group-hover:translate-x-[150%]" />
+        <ArrowRight size={18} strokeWidth={2.5} className="absolute -translate-x-[150%] transition-transform duration-300 ease-in-out group-hover:translate-x-0" />
+      </div>
     </span>
   ) : (
-    <span className={cn('btn-cta', className)}>
+    <span className={cn('group btn-cta', className)}>
       <span className="px-6 py-0 leading-none">{label}</span>
-      <span className="chip bg-black flex items-center justify-center w-[52px] h-[52px]">
-        <ArrowRight size={16} strokeWidth={2.5} color="#fff" />
+      <span className="chip bg-black flex items-center justify-center w-[52px] h-[52px] relative overflow-hidden">
+        <div className="flex relative w-full h-full items-center justify-center">
+          <ArrowRight size={16} strokeWidth={2.5} color="#fff" className="absolute transition-transform duration-300 ease-in-out group-hover:translate-x-[150%]" />
+          <ArrowRight size={16} strokeWidth={2.5} color="#fff" className="absolute -translate-x-[150%] transition-transform duration-300 ease-in-out group-hover:translate-x-0" />
+        </div>
       </span>
     </span>
   );

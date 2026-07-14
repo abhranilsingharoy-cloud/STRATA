@@ -76,10 +76,10 @@ export default function Header() {
         {menuOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={{ y: '-100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '-100%' }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-0 z-40 bg-[#0B0B0C] flex flex-col justify-center px-10 md:px-20"
           >
             <nav aria-label="Primary navigation">

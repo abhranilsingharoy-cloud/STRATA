@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import RevealText from '@/components/ui/RevealText';
+import Button from '@/components/ui/Button';
 
 const projects = [
   {
@@ -41,18 +43,14 @@ export default function FeaturedProjects() {
               className="font-display font-black text-black uppercase leading-none"
               style={{ fontSize: 'clamp(2rem, 4.5vw, 5rem)', letterSpacing: '-0.02em' }}
             >
-              RECENT WORK
+              <RevealText>RECENT WORK</RevealText>
             </h2>
           </div>
-          <Link
+          <Button
             href="/projects"
-            className="flex items-center self-start sm:self-auto bg-accent text-white text-xs font-semibold tracking-widest uppercase h-[48px]"
-          >
-            <span className="px-5">View All Projects</span>
-            <span className="flex items-center justify-center w-12 h-12 bg-black">
-              <ArrowRight size={14} />
-            </span>
-          </Link>
+            label="View All Projects"
+            className="self-start sm:self-auto"
+          />
         </div>
 
         {/* Project cards grid */}
@@ -74,9 +72,8 @@ export default function FeaturedProjects() {
                     alt={`${project.title} — ${project.location} architecture project`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  {/* Orange arrow chip in top-right */}
-                  <div className="absolute top-4 right-4 arrow-chip w-12 h-12 bg-accent flex items-center justify-center">
-                    <ArrowRight size={18} strokeWidth={2.5} />
+                  <div className="absolute top-4 right-4 z-10 pointer-events-none">
+                    <Button variant="chip-only" />
                   </div>
                 </div>
                 {/* Meta */}

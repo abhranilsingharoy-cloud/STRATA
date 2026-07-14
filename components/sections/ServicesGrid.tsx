@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { ArrowRight, PenTool, Home, Layers, ClipboardList } from 'lucide-react';
 import { motion } from 'framer-motion';
+import RevealText from '@/components/ui/RevealText';
+import Button from '@/components/ui/Button';
 
 const services = [
   {
@@ -46,13 +48,13 @@ export default function ServicesGrid() {
           className="font-display font-black text-black uppercase leading-none mb-16 md:mb-20"
           style={{ fontSize: 'clamp(2.8rem, 7vw, 8rem)', letterSpacing: '-0.025em' }}
         >
-          EXCEPTIONAL
+          <RevealText>EXCEPTIONAL</RevealText>
           <br />
-          ARCHITECTURE
+          <RevealText delay={0.1}>ARCHITECTURE</RevealText>
           <br />
-          &amp; DESIGN
+          <RevealText delay={0.2}>&amp; DESIGN</RevealText>
           <br />
-          SERVICES
+          <RevealText delay={0.3}>SERVICES</RevealText>
         </h2>
 
         {/* Bento grid — 2×2 with offset exactly like reference */}
@@ -75,13 +77,12 @@ export default function ServicesGrid() {
                 {/* Top row: icon + arrow chip */}
                 <div className="flex justify-between items-start mb-auto">
                   <Icon size={28} strokeWidth={1.5} className="text-black" aria-hidden="true" />
-                  <Link
+                  <Button
+                    variant="chip-only"
                     href={service.href}
-                    className="arrow-chip w-12 h-12 bg-accent flex items-center justify-center flex-shrink-0"
-                    aria-label={`Learn more about ${service.title}`}
-                  >
-                    <ArrowRight size={18} strokeWidth={2.5} />
-                  </Link>
+                    ariaLabel={`Learn more about ${service.title}`}
+                    className="flex-shrink-0"
+                  />
                 </div>
 
                 {/* Content */}

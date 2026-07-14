@@ -1,6 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import ParallaxImage from '@/components/ui/ParallaxImage';
 
 const testimonials = [
   {
@@ -30,20 +34,41 @@ const testimonials = [
 // Giant "CLIENT STORIES" background wordmark + full-bleed photo + 
 // floating dark quote cards staggered across the section
 export default function TestimonialsMarquee() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  useGSAP(() => {
+    if (!containerRef.current || !textRef.current) return;
+    
+    gsap.to(textRef.current, {
+      x: '-30%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true,
+      }
+    });
+  }, { scope: containerRef });
+
   return (
     <section
+      ref={containerRef}
       className="relative w-full overflow-hidden"
       style={{ minHeight: '90vh' }}
       aria-labelledby="stories-heading"
     >
-      {/* Full-bleed background photo */}
+      {/* Full-bleed background photo with parallax */}
       <div className="absolute inset-0">
-        <img
+        <ParallaxImage
           src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80"
           alt="Aerial view of award-winning architecture with infinity pool and mountain landscape"
           className="w-full h-full object-cover"
+          scale={1.2}
+          speed={0.5}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
       </div>
 
       {/* Giant background wordmark "CLIENT STORIES" — matches screenshot 8 */}
@@ -52,14 +77,16 @@ export default function TestimonialsMarquee() {
         aria-hidden="true"
       >
         <p
-          className="font-display font-black text-white/10 uppercase whitespace-nowrap"
+          ref={textRef}
+          className="font-display font-black text-white/15 uppercase whitespace-nowrap"
           style={{
             fontSize: 'clamp(6rem, 18vw, 22rem)',
             lineHeight: 0.85,
             letterSpacing: '-0.03em',
+            paddingLeft: '50vw', // Start partially offscreen
           }}
         >
-          &nbsp;CLIENT STORIES&nbsp;CLIENT STORIES&nbsp;
+          &nbsp;CLIENT STORIES&nbsp;&nbsp;CLIENT STORIES&nbsp;&nbsp;CLIENT STORIES&nbsp;
         </p>
       </div>
 
