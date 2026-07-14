@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 };
 
 const projects = [
-  { title: 'Cliffside Residence', location: 'Big Sur, CA', category: 'Residential', year: '2024', slug: 'cliffside-residence', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80' },
-  { title: 'Meridian Tower', location: 'Sydney, AU', category: 'Commercial', year: '2024', slug: 'meridian-tower', image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80' },
-  { title: 'The Loft House', location: 'Barcelona, ES', category: 'Residential', year: '2023', slug: 'loft-house-barcelona', image: 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=900&q=80' },
-  { title: 'Pavilion Garden', location: 'Tokyo, JP', category: 'Interiors', year: '2023', slug: 'pavilion-garden', image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80' },
-  { title: 'Urban Commons', location: 'London, UK', category: 'Masterplanning', year: '2023', slug: 'urban-commons', image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80' },
-  { title: 'Sea Glass Villa', location: 'Malibu, CA', category: 'Residential', year: '2022', slug: 'sea-glass-villa', image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80' },
-  { title: 'The Foundry', location: 'Berlin, DE', category: 'Commercial', year: '2022', slug: 'the-foundry', image: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=900&q=80' },
-  { title: 'Cedarwood Retreat', location: 'Vermont, US', category: 'Residential', year: '2021', slug: 'cedarwood-retreat', image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80' },
-  { title: 'Atlas Office Park', location: 'Dubai, UAE', category: 'Commercial', year: '2021', slug: 'atlas-office-park', image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80' },
+  { title: 'Cliffside Residence', location: 'Big Sur, CA', category: 'Residential', year: '2024', slug: 'cliffside-residence', image: '/images/exterior_hero.jpg' },
+  { title: 'Meridian Tower', location: 'Sydney, AU', category: 'Commercial', year: '2024', slug: 'meridian-tower', image: '/images/exterior_tower.jpg' },
+  { title: 'The Loft House', location: 'Barcelona, ES', category: 'Residential', year: '2023', slug: 'loft-house-barcelona', image: '/images/exterior_villa.jpg' },
+  { title: 'Pavilion Garden', location: 'Tokyo, JP', category: 'Interiors', year: '2023', slug: 'pavilion-garden', image: '/images/interior_living.jpg' },
+  { title: 'Urban Commons', location: 'London, UK', category: 'Masterplanning', year: '2023', slug: 'urban-commons', image: '/images/interior_gallery.jpg' },
+  { title: 'Sea Glass Villa', location: 'Malibu, CA', category: 'Residential', year: '2022', slug: 'sea-glass-villa', image: '/images/exterior_hero.jpg' },
+  { title: 'The Foundry', location: 'Berlin, DE', category: 'Commercial', year: '2022', slug: 'the-foundry', image: '/images/abstract_detail.jpg' },
+  { title: 'Cedarwood Retreat', location: 'Vermont, US', category: 'Residential', year: '2021', slug: 'cedarwood-retreat', image: '/images/exterior_villa.jpg' },
+  { title: 'Atlas Office Park', location: 'Dubai, UAE', category: 'Commercial', year: '2021', slug: 'atlas-office-park', image: '/images/exterior_tower.jpg' },
 ];
 
 const categories = ['All', 'Residential', 'Commercial', 'Interiors', 'Masterplanning'];

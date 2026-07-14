@@ -13,7 +13,7 @@ export default function CTABanner() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920&q=80"
+          src="/images/exterior_hero.jpg"
           alt="Award-winning modern architecture exterior with clean geometric lines at sunset"
           className="w-full h-full object-cover"
           style={{ filter: 'brightness(0.55)' }}

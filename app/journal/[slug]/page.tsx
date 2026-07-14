@@ -11,8 +11,8 @@ const articles: Record<string, {
   'sustainable-materials': {
     title: 'Why Sustainable Materials Are Reshaping Modern Architecture',
     date: 'June 2025', category: 'Sustainability', author: 'James Vile', authorRole: 'Principal Architect',
-    authorAvatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1920&q=80',
+    authorAvatar: '/images/portrait_1.jpg',
+    heroImage: '/images/abstract_detail.jpg',
     body: [
       'The materials we choose to build with are not merely structural or aesthetic decisions — they are moral ones. As the construction industry accounts for nearly 40% of global carbon emissions, the specification of honest, low-carbon, and regionally-sourced materials has become the central design challenge of our generation.',
       'Cross-laminated timber (CLT) is perhaps the most significant shift we have seen in the past decade. Sequestering carbon throughout the life of the building while offering structural performance that rivals concrete, CLT is enabling a new typology of mid-rise timber construction that was unthinkable twenty years ago.',
@@ -25,8 +25,8 @@ const articles: Record<string, {
   'renovation-signs': {
     title: '5 Signs Your Renovation Is Ready to Begin',
     date: 'May 2025', category: 'Process', author: 'Axon Broth', authorRole: 'Design Director',
-    authorAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80',
+    authorAvatar: '/images/portrait_3.jpg',
+    heroImage: '/images/interior_kitchen.jpg',
     body: [
       'One of the most common questions we receive from prospective clients is: how do I know when I\'m ready to begin? The answer is rarely about budget alone. It is about clarity of intent, tolerance for disruption, and the quality of the brief you bring to your architect.',
       'First, you have a clear sense of what is not working. Before we can design a solution, we need to understand the problem. The clients who are most ready to begin are those who can articulate precisely what their current space fails to do — not just "it feels small" but "we have nowhere to cook together, nowhere for the children to do homework without disturbing each other, and the garden is completely disconnected from the living areas."',
@@ -41,8 +41,8 @@ const articles: Record<string, {
   'interior-layout-value': {
     title: 'How Interior Layout Impacts Property Value',
     date: 'April 2025', category: 'Interiors', author: 'Mara Lin', authorRole: 'Interior Lead',
-    authorAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920&q=80',
+    authorAvatar: '/images/portrait_2.jpg',
+    heroImage: '/images/interior_living.jpg',
     body: [
       'The relationship between interior layout and property value is more direct than most people realise. Estate agents speak in percentages — a well-executed kitchen extension adds 8%, a converted loft adds 12% — but these figures obscure a more nuanced truth: it is not the square footage that matters, it is the quality of the spatial decisions made within it.',
       'The single most valuable spatial decision in any home is the relationship between the kitchen, dining, and living areas. The open-plan living arrangement — which has dominated residential design for thirty years — is now being reassessed. Clients increasingly want connectivity without total openness: spaces that can be closed for privacy, acoustic separation, and the simple pleasure of a kitchen that can be hidden from guests.',
@@ -55,8 +55,8 @@ const articles: Record<string, {
   'concept-to-built-form': {
     title: 'Inside Our Process: From Concept Sketch to Built Form',
     date: 'March 2025', category: 'Process', author: 'James Vile', authorRole: 'Principal Architect',
-    authorAvatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80',
+    authorAvatar: '/images/portrait_1.jpg',
+    heroImage: '/images/exterior_hero.jpg',
     body: [
       'Architecture begins with listening. Before we pick up a pencil, we spend time understanding our clients — not just the functional requirements of their brief, but their daily rituals, their aesthetic instincts, the buildings they love and the ones they find hostile. A good brief is as valuable as a good design.',
       'The concept stage is the most generative and the most vulnerable phase of any project. Ideas are fragile before they are built. Our process at this stage is deliberately analogue — hand sketches, physical models, and conversations rather than renders and presentations. We want to think in three dimensions before we commit to the precision of CAD.',
@@ -70,8 +70,8 @@ const articles: Record<string, {
   'biophilic-design': {
     title: 'Biophilic Design: Bringing Nature Into Urban Homes',
     date: 'February 2025', category: 'Design', author: 'Mara Lin', authorRole: 'Interior Lead',
-    authorAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80',
+    authorAvatar: '/images/portrait_2.jpg',
+    heroImage: '/images/exterior_villa.jpg',
     body: [
       'Biophilia — the innate human affinity for the natural world — is not a design trend. It is a fundamental aspect of human psychology, supported by decades of research demonstrating that access to natural light, vegetation, natural materials, and views of nature improves wellbeing, reduces stress, and increases cognitive performance.',
       'In architecture, biophilic design translates into a set of spatial strategies that can be applied at every scale — from the placement of a single window to the organisation of an entire city. At the building level, the most effective strategies are often the simplest: maximising views of sky and vegetation, using natural materials whose texture and colour vary with light and age, and ensuring that occupants experience the passage of time through changing shadows and seasons.',

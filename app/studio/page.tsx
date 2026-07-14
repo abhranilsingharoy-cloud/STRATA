@@ -27,7 +27,7 @@ export default function StudioPage() {
       <section className="relative w-full min-h-screen overflow-hidden pt-[60px]">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920&q=80"
+            src="/images/interior_gallery.jpg"
             alt="Architect-designed interior with glass walls and mountain views"
             className="w-full h-full object-cover"
           />
@@ -113,7 +113,7 @@ export default function StudioPage() {
               </div>
             </div>
             <div className="relative aspect-[4/5] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"
+              <img src="/images/exterior_hero.jpg"
                 alt="Modern residential architecture exterior" className="w-full h-full object-cover" />
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function StudioPage() {
           <p className="kicker text-white/50 mb-8">[ For Partners ]</p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="relative aspect-[4/5] overflow-hidden order-2 lg:order-1">
-              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80"
+              <img src="/images/exterior_tower.jpg"
                 alt="Commercial architecture project by STRATA" className="w-full h-full object-cover" />
             </div>
             <div className="order-1 lg:order-2">

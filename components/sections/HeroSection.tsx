@@ -20,7 +20,7 @@ export default function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <ParallaxImage
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+          src="/images/exterior_hero.jpg"
           alt="Modern minimalist architecture exterior with geometric lines"
           className="w-full h-full object-cover object-center"
           scale={1.05} // Gentle scale so parallax doesn't clip

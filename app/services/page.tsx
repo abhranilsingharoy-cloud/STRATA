@@ -15,7 +15,7 @@ const services = [
     title: 'Architectural Design',
     description: 'We approach every project as a unique opportunity — listening carefully, designing boldly, and delivering buildings that stand the test of time.',
     deliverables: ['Site Analysis & Feasibility', 'Concept Sketches & Massing', '3D Visualization', 'Planning Applications', 'Construction Documentation', 'Material & Specification Schedules'],
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+    image: '/images/exterior_hero.jpg',
     imageAlt: 'Architectural design process showing concept sketches and 3D models',
   },
   {
@@ -24,7 +24,7 @@ const services = [
     title: 'Interior Design',
     description: 'Thoughtful interiors that balance beauty with function. From material selections to lighting strategies, every detail is considered.',
     deliverables: ['Space Planning & Layout', 'Material & Finish Palette', 'Furniture Specification', 'Lighting Design', 'Custom Joinery Design', 'Art & Accessories Curation'],
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
+    image: '/images/interior_living.jpg',
     imageAlt: 'Interior design — architect-designed living space with glass walls and concrete finish',
   },
   {
@@ -33,7 +33,7 @@ const services = [
     title: 'Concept & Masterplanning',
     description: 'Strategic vision at every scale — from a single infill lot to a multi-hectare urban quarter. We shape places people want to live, work, and gather.',
     deliverables: ['Urban Context Analysis', 'Zoning & Massing Strategy', 'Landscape Integration', 'Sustainability Framework', 'Phasing Plans', 'Stakeholder Consultation'],
-    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80',
+    image: '/images/exterior_tower.jpg',
     imageAlt: 'Masterplanning concept for urban architecture development',
   },
   {
@@ -42,7 +42,7 @@ const services = [
     title: 'Project Management',
     description: 'Expert oversight from groundbreaking through handover — coordinating contractors, consultants, and clients to ensure every project is delivered on time and on budget.',
     deliverables: ['Contractor Procurement', 'Programme & Budget Control', 'Site Inspections', 'Quality Assurance', 'Risk Management', 'Defects Liability Oversight'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80',
+    image: '/images/interior_kitchen.jpg',
     imageAlt: 'Project management — architect reviewing construction documents on site',
   },
 ];

@@ -12,21 +12,21 @@ const projects = [
     location: 'Big Sur, CA',
     category: 'Residential',
     slug: 'cliffside-residence',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80',
+    image: '/images/exterior_hero.jpg',
   },
   {
     title: 'Meridian Tower',
     location: 'Sydney, AU',
     category: 'Commercial',
     slug: 'meridian-tower',
-    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80',
+    image: '/images/exterior_tower.jpg',
   },
   {
     title: 'The Loft House',
     location: 'Barcelona, ES',
     category: 'Residential',
     slug: 'loft-house-barcelona',
-    image: 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=900&q=80',
+    image: '/images/exterior_villa.jpg',
   },
 ];
 

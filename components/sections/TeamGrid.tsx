@@ -8,19 +8,19 @@ const teamMembers = [
   {
     name: 'James Vile',
     role: 'Principal Architect',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80',
+    image: '/images/portrait_1.jpg',
     slug: '/team',
   },
   {
     name: 'Axon Broth',
     role: 'Design Director',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80',
+    image: '/images/portrait_3.jpg',
     slug: '/team',
   },
   {
     name: 'Mara Lin',
     role: 'Interior Lead',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
+    image: '/images/portrait_2.jpg',
     slug: '/team',
   },
 ];

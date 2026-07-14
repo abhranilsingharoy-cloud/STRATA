@@ -11,21 +11,21 @@ const testimonials = [
     quote: "Working with STRATA transformed our vision into something far beyond what we imagined. The attention to detail and the way they handled every stage of the project was truly exceptional.",
     name: 'Laura Salas',
     role: 'Homeowner — Cliffside Residence',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
+    avatar: '/images/portrait_2.jpg',
     position: 'top-[8%] left-[28%]',
   },
   {
     quote: "STRATA brought an extraordinary level of craftsmanship and creativity to our commercial development. Their process was seamless, and the results speak for themselves.",
     name: 'Peter Jonas',
     role: 'Developer — Meridian Tower',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
+    avatar: '/images/portrait_1.jpg',
     position: 'top-[30%] right-[4%]',
   },
   {
     quote: "The studio understood our brief from day one. They pushed the design beautifully while staying true to the spirit of what we wanted. A truly collaborative and rewarding experience.",
     name: 'Amara Chen',
     role: 'Interior Stylist — The Loft House',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80',
+    avatar: '/images/portrait_3.jpg',
     position: 'bottom-[12%] left-[6%]',
   },
 ];
@@ -62,7 +62,7 @@ export default function TestimonialsMarquee() {
       {/* Full-bleed background photo with parallax */}
       <div className="absolute inset-0">
         <ParallaxImage
-          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80"
+          src="/images/exterior_villa.jpg"
           alt="Aerial view of award-winning architecture with infinity pool and mountain landscape"
           className="w-full h-full object-cover"
           scale={1.2}

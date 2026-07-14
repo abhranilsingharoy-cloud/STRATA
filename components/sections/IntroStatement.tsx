@@ -16,7 +16,7 @@ export default function IntroStatement() {
       {/* Full-bleed background photo */}
       <div className="absolute inset-0">
         <ParallaxImage
-          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920&q=80"
+          src="/images/interior_living.jpg"
           alt="Architect-designed interior with floor-to-ceiling glass walls and mountain views"
           className="w-full h-full object-cover object-center"
           scale={1.15}
