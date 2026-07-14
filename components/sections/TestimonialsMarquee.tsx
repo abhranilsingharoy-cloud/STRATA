@@ -1,0 +1,112 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
+const testimonials = [
+  {
+    quote: "Working with STRATA transformed our vision into something far beyond what we imagined. The attention to detail and the way they handled every stage of the project was truly exceptional.",
+    name: 'Laura Salas',
+    role: 'Homeowner — Cliffside Residence',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
+    position: 'top-[8%] left-[28%]',
+  },
+  {
+    quote: "STRATA brought an extraordinary level of craftsmanship and creativity to our commercial development. Their process was seamless, and the results speak for themselves.",
+    name: 'Peter Jonas',
+    role: 'Developer — Meridian Tower',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
+    position: 'top-[30%] right-[4%]',
+  },
+  {
+    quote: "The studio understood our brief from day one. They pushed the design beautifully while staying true to the spirit of what we wanted. A truly collaborative and rewarding experience.",
+    name: 'Amara Chen',
+    role: 'Interior Stylist — The Loft House',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80',
+    position: 'bottom-[12%] left-[6%]',
+  },
+];
+
+// TestimonialsMarquee — mirrors Doorly screenshot 8:
+// Giant "CLIENT STORIES" background wordmark + full-bleed photo + 
+// floating dark quote cards staggered across the section
+export default function TestimonialsMarquee() {
+  return (
+    <section
+      className="relative w-full overflow-hidden"
+      style={{ minHeight: '90vh' }}
+      aria-labelledby="stories-heading"
+    >
+      {/* Full-bleed background photo */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80"
+          alt="Aerial view of award-winning architecture with infinity pool and mountain landscape"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      {/* Giant background wordmark "CLIENT STORIES" — matches screenshot 8 */}
+      <div
+        className="absolute inset-0 flex items-center pointer-events-none select-none overflow-hidden"
+        aria-hidden="true"
+      >
+        <p
+          className="font-display font-black text-white/10 uppercase whitespace-nowrap"
+          style={{
+            fontSize: 'clamp(6rem, 18vw, 22rem)',
+            lineHeight: 0.85,
+            letterSpacing: '-0.03em',
+          }}
+        >
+          &nbsp;CLIENT STORIES&nbsp;CLIENT STORIES&nbsp;
+        </p>
+      </div>
+
+      {/* Section heading */}
+      <h2 id="stories-heading" className="sr-only">Client Stories</h2>
+
+      {/* Floating testimonial cards */}
+      <div className="relative z-10 w-full h-full min-h-[90vh]">
+        {testimonials.map((t, i) => (
+          <motion.div
+            key={t.name}
+            className={`absolute max-w-xs bg-[#1a1a1a]/90 backdrop-blur-sm p-7 ${t.position}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.18, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            style={{ 
+              position: 'absolute',
+              top: ['10%', '35%', 'auto'][i],
+              bottom: i === 2 ? '10%' : 'auto',
+              left: i === 0 ? '25%' : i === 2 ? '5%' : 'auto',
+              right: i === 1 ? '5%' : 'auto',
+            }}
+          >
+            {/* Quote mark */}
+            <p className="text-accent text-4xl font-display leading-none mb-4">"</p>
+            <p className="text-white text-sm leading-relaxed mb-6">
+              {t.quote}
+            </p>
+            {/* Author */}
+            <div className="flex items-center gap-3">
+              <img
+                src={t.avatar}
+                alt={`Portrait of ${t.name}`}
+                className="w-10 h-10 rounded-full object-cover"
+              />
+              <div>
+                <p className="text-white font-semibold text-sm">{t.name}</p>
+                <p className="text-white/50 text-xs">{t.role}</p>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Spacer so cards have room */}
+      <div className="relative z-0 min-h-[90vh]" />
+    </section>
+  );
+}

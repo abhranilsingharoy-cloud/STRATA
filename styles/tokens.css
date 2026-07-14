@@ -1,0 +1,49 @@
+/* ─────────────────────────────────────────────
+   STRATA — Brand Design Tokens
+   ───────────────────────────────────────────── */
+
+:root {
+  /* Colors */
+  --color-bg-dark: #0B0B0C;
+  --color-bg-white: #FFFFFF;
+  --color-accent: #FF5A2E;
+  --color-accent-dark: #CC3E18;
+  --color-accent-light: #FF7A55;
+  --color-neutral-gray: #6B6B6B;
+  --color-light-gray: #F4F4F4;
+  --color-card-bg: #EBEBEB;
+  --color-grid-line: rgba(255, 90, 46, 0.20);
+  --color-text-dark: #0B0B0C;
+  --color-text-white: #FFFFFF;
+  --color-text-muted: #9A9A9A;
+
+  /* Typography */
+  --font-display: var(--font-archivo-black), 'Archivo Black', 'Arial Black', sans-serif;
+  --font-body: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Fluid type scale */
+  --fs-hero: clamp(4rem, 10vw, 12rem);
+  --fs-h1: clamp(2.5rem, 6vw, 7rem);
+  --fs-h2: clamp(2rem, 4vw, 4.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.875rem);
+  --fs-body: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+  --fs-kicker: 0.75rem;
+
+  /* Spacing */
+  --section-pad-y: clamp(4rem, 8vw, 9rem);
+  --section-pad-x: clamp(1.25rem, 5vw, 5rem);
+  --grid-max: 1600px;
+
+  /* Animation */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 0.25s;
+  --duration-base: 0.5s;
+  --duration-slow: 0.9s;
+
+  /* Grid lines */
+  --grid-line-color: rgba(255, 90, 46, 0.15);
+  --grid-line-width: 1px;
+}
