@@ -24,6 +24,15 @@
   100% { transform: translateX(-50%); }
 }
 
+@keyframes image-scale {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.animate-image-scale {
+  animation: image-scale 20s ease-out forwards;
+}
+
 /* ─── STRATA Design Tokens ─── */
 :root {
   --color-text-dark: #0B0B0C;

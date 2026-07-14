@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const stats = [
-  { value: 180, suffix: '+', label: 'Projects Delivered' },
-  { value: 120, prefix: '$', suffix: 'M+', label: 'Built Value' },
-  { value: 15, suffix: '', label: 'Design Awards' },
+  { value: 10, suffix: 'M+', label: 'Acres Analyzed' },
+  { value: 50, suffix: '+', label: 'Cities Planned' },
+  { value: 15, suffix: '%', label: 'Carbon Reduction' },
 ];
 
 const pressLogos = [
-  'Dezeen', 'ArchDaily', 'Wallpaper*', 'Frame', 'AIA', 'Arch Digest',
+  'TechCrunch', 'Wired', 'Fast Company', 'MIT Tech Review', 'Forbes', 'Bloomberg',
 ];
 
 function CountUp({ target, prefix = '', suffix = '' }: { target: number; prefix?: string; suffix?: string }) {
@@ -53,13 +53,13 @@ export default function AboutStats() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="kicker mb-6">[ About Us ]</p>
+            <p className="kicker mb-6">[ Platform Impact ]</p>
             <h2
               id="about-heading"
               className="font-display font-black text-black uppercase leading-tight mb-10"
               style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.5rem)', letterSpacing: '-0.02em' }}
             >
-              WE ARE A PROFESSIONAL ARCHITECTURE STUDIO DEDICATED TO DESIGNING EXCEPTIONAL SPACES.
+              WE ARE EMPOWERING URBAN PLANNERS TO DESIGN SUSTAINABLE CITIES FASTER.
             </h2>
 
             {/* Stat counters */}

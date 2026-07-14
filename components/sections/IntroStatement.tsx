@@ -12,13 +12,13 @@ import Button from '@/components/ui/Button';
 // orange panel right (subcopy + CONTACT CTA button)
 export default function IntroStatement() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden" aria-label="Studio introduction">
+    <section className="relative w-full min-h-screen overflow-hidden" aria-label="Platform introduction">
       {/* Full-bleed background photo */}
       <div className="absolute inset-0">
         <ParallaxImage
-          src="/images/interior_living.jpg"
-          alt="Architect-designed interior with floor-to-ceiling glass walls and mountain views"
-          className="w-full h-full object-cover object-center"
+          src="/images/eco_ai_hero.jpg"
+          alt="Eco Architect AI analyzing a city"
+          className="w-full h-full object-cover object-center grayscale opacity-80"
           scale={1.15}
           speed={0.3}
         />
@@ -38,10 +38,10 @@ export default function IntroStatement() {
             className="font-display font-black text-white uppercase leading-none"
             style={{ fontSize: 'clamp(2.5rem, 5.5vw, 6.5rem)', letterSpacing: '-0.02em' }}
           >
-            <RevealText>LEADING THE</RevealText><br />
-            <RevealText delay={0.1}>INDUSTRY WITH</RevealText><br />
-            <RevealText delay={0.2}>A CLIENT-FIRST</RevealText><br />
-            <RevealText delay={0.3}>FOCUS</RevealText>
+            <RevealText>DESIGN SMARTER,</RevealText><br />
+            <RevealText delay={0.1}>SUSTAINABLE CITIES</RevealText><br />
+            <RevealText delay={0.2}>WITH GENERATIVE</RevealText><br />
+            <RevealText delay={0.3}>AI.</RevealText>
           </h2>
         </motion.div>
 
@@ -54,14 +54,14 @@ export default function IntroStatement() {
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="text-white font-body text-base leading-relaxed mb-10 max-w-[300px]">
-            <RevealText>We craft inspiring spaces that blend</RevealText>{' '}
-            <RevealText delay={0.1}>cutting-edge design with enduring</RevealText>{' '}
-            <RevealText delay={0.2}>functionality, turning your vision</RevealText>{' '}
-            <RevealText delay={0.3}>into reality.</RevealText>
+            <RevealText>Eco Architect AI is an urban</RevealText>{' '}
+            <RevealText delay={0.1}>planning assistant that analyzes</RevealText>{' '}
+            <RevealText delay={0.2}>satellite imagery to generate customized,</RevealText>{' '}
+            <RevealText delay={0.3}>data-driven planning recommendations.</RevealText>
           </div>
           <Button
             href="/contact"
-            label="CONTACT"
+            label="EXPLORE PLATFORM"
             className="self-start bg-white text-black"
           />
         </motion.div>
@@ -70,11 +70,11 @@ export default function IntroStatement() {
       {/* Mobile CTA below panels */}
       <div className="md:hidden bg-accent p-8">
         <p className="text-white text-sm leading-relaxed mb-6">
-          We craft inspiring spaces that blend cutting-edge design with enduring functionality.
+          Eco Architect AI is an urban planning assistant that analyzes satellite imagery to generate customized, data-driven planning recommendations.
         </p>
         <Button
           href="/contact"
-          label="CONTACT"
+          label="EXPLORE PLATFORM"
         />
       </div>
     </section>

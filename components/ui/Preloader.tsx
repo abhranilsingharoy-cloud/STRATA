@@ -9,14 +9,14 @@ export default function Preloader() {
 
   useEffect(() => {
     // Check if it's the first time loading in this session
-    const hasLoaded = sessionStorage.getItem('strata_loaded');
+    const hasLoaded = sessionStorage.getItem('ECO.AI_loaded');
     
     if (!hasLoaded) {
       setShowPreloader(true);
       // Wait for the animation to finish before hiding the preloader
       const timer = setTimeout(() => {
         setIsLoading(false);
-        sessionStorage.setItem('strata_loaded', 'true');
+        sessionStorage.setItem('ECO.AI_loaded', 'true');
       }, 2000); // Total animation duration
       
       return () => clearTimeout(timer);
@@ -28,7 +28,7 @@ export default function Preloader() {
 
   if (!showPreloader) return null;
 
-  const text = "STRATA";
+  const text = "ECO.AI";
 
   return (
     <AnimatePresence>

@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const studioLinks = [
-  { href: '/studio', label: 'Studio' },
-  { href: '/services', label: 'Services' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/team', label: 'Team' },
+  { href: '/studio', label: 'Platform' },
+  { href: '/services', label: 'Features' },
+  { href: '/projects', label: 'Use Cases' },
+  { href: '/team', label: 'Company' },
 ];
 const resourceLinks = [
-  { href: '/journal', label: 'Journal' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/journal', label: 'Research' },
+  { href: '/contact', label: 'Demo' },
   { href: '/sitemap.xml', label: 'Sitemap' },
 ];
 const socialLinks = [
@@ -27,10 +27,10 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <p className="font-display text-2xl font-black tracking-widest uppercase text-white mb-1">
-              STRATA<span className="text-accent">©</span>
+              ECO.AI<span className="text-accent">©</span>
             </p>
             <p className="text-white/50 text-sm leading-relaxed mt-4 max-w-[260px]">
-              Designing Form, Shaping Life. An award-winning architecture and interior design studio.
+              Designing Smarter, Sustainable Cities with Generative AI.
             </p>
             <div className="mt-8">
               <p className="text-white/30 text-xs tracking-widest uppercase mb-2">Follow us</p>
@@ -39,7 +39,7 @@ export default function Footer() {
                   <a
                     key={s.label}
                     href={s.href}
-                    aria-label={`STRATA on ${s.label}`}
+                    aria-label={`ECO.AI on ${s.label}`}
                     className="text-white/40 hover:text-accent transition-colors text-xs tracking-widest uppercase"
                   >
                     {s.label}
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Studio links */}
           <div>
-            <p className="text-white/30 text-xs tracking-widest uppercase mb-6">Studio Links</p>
+            <p className="text-white/30 text-xs tracking-widest uppercase mb-6">Platform Links</p>
             <ul className="space-y-3">
               {studioLinks.map((l) => (
                 <li key={l.href}>
@@ -88,8 +88,8 @@ export default function Footer() {
             <p className="text-white/30 text-xs tracking-widest uppercase mb-6">Get in Touch</p>
             <div className="space-y-3 text-sm text-white/70">
               <p>123 Architects Row<br />New York, NY 10001</p>
-              <a href="mailto:hello@strata.studio" className="block hover:text-accent transition-colors">
-                hello@strata.studio
+              <a href="mailto:hello@ecoarchitect.ai" className="block hover:text-accent transition-colors">
+                hello@ecoarchitect.ai
               </a>
               <a href="tel:+15555550100" className="block hover:text-accent transition-colors">
                 +1 (555) 555-0100
@@ -99,7 +99,7 @@ export default function Footer() {
               href="/contact"
               className="mt-8 inline-flex items-center h-12 bg-accent text-white text-xs font-semibold tracking-widest uppercase"
             >
-              <span className="px-5">Start a Project</span>
+              <span className="px-5">Request Demo</span>
               <span className="flex items-center justify-center w-12 h-12 bg-black">
                 <ArrowRight size={14} />
               </span>
@@ -111,10 +111,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10 max-w-[1600px] mx-auto px-6 md:px-20 py-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <p className="text-white/30 text-xs">
-          © {new Date().getFullYear()} STRATA Architecture Studio. All rights reserved.
+          © {new Date().getFullYear()} Eco Architect AI. All rights reserved.
         </p>
         <p className="text-white/30 text-xs">
-          Designing Form, Shaping Life.
+          Designing Smarter, Sustainable Cities.
         </p>
       </div>
 
@@ -133,7 +133,7 @@ export default function Footer() {
             whiteSpace: 'nowrap',
           }}
         >
-          STRATA©
+          ECO.AI©
         </p>
       </div>
     </footer>

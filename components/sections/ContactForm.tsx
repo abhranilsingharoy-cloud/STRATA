@@ -83,7 +83,7 @@ export default function ContactForm() {
             <div className="space-y-5">
               {[
                 { Icon: MapPin, text: '123 Architects Row, New York, NY 10001' },
-                { Icon: Mail, text: 'hello@strata.studio', href: 'mailto:hello@strata.studio' },
+                { Icon: Mail, text: 'hello@ECO.AI.studio', href: 'mailto:hello@ECO.AI.studio' },
                 { Icon: Phone, text: '+1 (555) 555-0100', href: 'tel:+15555550100' },
               ].map(({ Icon, text, href }) => (
                 <div key={text} className="flex items-start gap-4">

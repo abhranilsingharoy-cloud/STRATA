@@ -5,11 +5,11 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // CTABanner — closing section before footer
-// Full-bleed architectural photo + oversized STRATA wordmark overlay + CTA button
+// Full-bleed architectural photo + oversized ECO.AI wordmark overlay + CTA button
 // Matches the giant wordmark banner pattern from Doorly reference
 export default function CTABanner() {
   return (
-    <section className="relative w-full overflow-hidden" aria-label="Book a consultation with STRATA">
+    <section className="relative w-full overflow-hidden" aria-label="Request a demo of Eco Architect AI">
       {/* Background */}
       <div className="absolute inset-0">
         <img
@@ -31,7 +31,7 @@ export default function CTABanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          [ Book A Consultation ]
+          [ Start Planning Today ]
         </motion.p>
 
         {/* Oversized heading */}
@@ -43,11 +43,11 @@ export default function CTABanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         >
-          SCHEDULE
+          GENERATE
           <br />
-          A FREE
+          YOUR FIRST
           <br />
-          CONSULTATION
+          MASTERPLAN
         </motion.h2>
 
         <motion.p
@@ -57,8 +57,7 @@ export default function CTABanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          We craft inspiring spaces that blend cutting-edge design with enduring functionality,
-          turning your vision into reality.
+          Upload your site's satellite imagery and let Eco Architect AI generate data-driven urban planning recommendations.
         </motion.p>
 
         <motion.div
@@ -70,9 +69,9 @@ export default function CTABanner() {
           <Link
             href="/contact"
             className="inline-flex items-center bg-accent text-white text-xs font-semibold tracking-widest uppercase h-[56px]"
-            aria-label="Contact STRATA to start your project"
+            aria-label="Request an ECO.AI Demo"
           >
-            <span className="px-8">CONTACT US</span>
+            <span className="px-8">REQUEST DEMO</span>
             <span className="flex items-center justify-center w-14 h-14 bg-black">
               <ArrowRight size={18} strokeWidth={2.5} color="#fff" />
             </span>
@@ -93,7 +92,7 @@ export default function CTABanner() {
             whiteSpace: 'nowrap',
           }}
         >
-          STRATA
+          ECO.AI
         </p>
       </div>
     </section>

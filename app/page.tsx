@@ -11,9 +11,9 @@ import CTABanner from '@/components/sections/CTABanner';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'STRATA — Architecture & Design Studio',
+  title: 'Eco Architect AI — Generative Urban Planning',
   description:
-    'STRATA is an award-winning architecture and interior design studio. 180+ projects delivered, $120M+ built value, 15 design awards. Designing Form, Shaping Life.',
+    'Eco Architect AI is a Generative AI-powered urban planning assistant that helps architects and city planners design smarter, more sustainable cities.',
 };
 
 export default function HomePage() {
@@ -23,11 +23,8 @@ export default function HomePage() {
       <IntroStatement />
       <ServicesGrid />
       <FeaturedProjects />
-      <ForClients />
       <AboutStats />
       <TestimonialsMarquee />
-      <TeamGrid />
-      <JournalPreview />
       <CTABanner />
     </>
   );

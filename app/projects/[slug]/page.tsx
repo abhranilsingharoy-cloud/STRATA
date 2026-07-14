@@ -35,7 +35,7 @@ const projects: Record<string, {
   'loft-house-barcelona': {
     title: 'The Loft House', location: 'Barcelona, ES', year: '2023',
     size: '280 sqm', scope: 'Architecture + Interior Design', category: 'Residential',
-    description: 'A 19th century industrial warehouse in the Poblenou district transformed into a family home. Exposing the original cast-iron structure and brick vaults, STRATA inserted a new lightweight steel and glass mezzanine that floats above the original floor plane — a contemporary layer that respects the building\'s industrial heritage.',
+    description: 'A 19th century industrial warehouse in the Poblenou district transformed into a family home. Exposing the original cast-iron structure and brick vaults, ECO.AI inserted a new lightweight steel and glass mezzanine that floats above the original floor plane — a contemporary layer that respects the building\'s industrial heritage.',
     heroImage: '/images/interior_living.jpg',
     galleryImages: [
       '/images/exterior_villa.jpg',

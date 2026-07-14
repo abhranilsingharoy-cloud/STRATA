@@ -9,19 +9,19 @@ import ParallaxImage from '@/components/ui/ParallaxImage';
 import Button from '@/components/ui/Button';
 
 // Hero section — matches Doorly screenshot 1 exactly:
-// Full-viewport image/canvas, giant "STRATA" wordmark layered on photo,
+// Full-viewport image/canvas, giant "ECO.AI" wordmark layered on photo,
 // kicker tag bottom-left, CTA bottom-right
 export default function HeroSection() {
   return (
     <section
       className="relative w-full h-screen min-h-[600px] overflow-hidden"
-      aria-label="STRATA Architecture Studio — Hero"
+      aria-label="Eco Architect AI — Hero"
     >
       {/* Background image */}
       <div className="absolute inset-0">
         <ParallaxImage
-          src="/images/exterior_hero.jpg"
-          alt="Modern minimalist architecture exterior with geometric lines"
+          src="/images/eco_ai_hero.jpg"
+          alt="Satellite map of a modern coastal city with glowing AI urban planning overlays"
           className="w-full h-full object-cover object-center"
           scale={1.05} // Gentle scale so parallax doesn't clip
           speed={0.4}
@@ -36,7 +36,7 @@ export default function HeroSection() {
         aria-hidden="true"
       >
         <div className="overflow-hidden inline-flex">
-          {'STRATA'.split('').map((char, index) => (
+          {'ECO.AI'.split('').map((char, index) => (
             <motion.span
               key={index}
               initial={{ y: '100%', rotate: 2 }}
@@ -64,13 +64,12 @@ export default function HeroSection() {
       {/* Bottom-left: kicker + subcopy */}
       <div className="absolute bottom-10 left-6 md:left-20 max-w-sm z-20">
         <RevealText triggerOnLoad delay={0.6}>
-          <p className="kicker text-white/60 mb-3">[ BOOK A CONSULTATION ]</p>
+          <p className="kicker text-white/60 mb-3">[ START PLANNING ]</p>
         </RevealText>
         <br />
         <RevealText triggerOnLoad delay={0.7}>
           <p className="text-white text-sm leading-relaxed font-body max-w-[280px]">
-            From concept sketches to built form — our team guides you through a seamless and
-            visionary design experience.
+            Upload satellite imagery and generate data-driven urban planning recommendations in seconds.
           </p>
         </RevealText>
       </div>
@@ -84,7 +83,7 @@ export default function HeroSection() {
       >
         <Button
           href="/contact"
-          label="CONTACT US"
+          label="REQUEST DEMO"
         />
       </motion.div>
     </section>

@@ -24,26 +24,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "STRATA — Architecture & Design Studio",
-    template: "%s | STRATA Studio",
+    default: "Eco Architect AI — Generative Urban Planning",
+    template: "%s | Eco Architect AI",
   },
   description:
-    "STRATA is an award-winning architecture and interior design studio delivering exceptional spaces that shape how you live. 180+ projects, $120M+ built value.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://strata.studio"),
+    "Eco Architect AI is a Generative AI-powered urban planning assistant that helps architects and city planners design smarter, more sustainable cities.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ECO.AI.studio"),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "STRATA Studio",
-    title: "STRATA — Architecture & Design Studio",
+    siteName: "Eco Architect AI",
+    title: "Eco Architect AI — Generative Urban Planning",
     description:
-      "Award-winning architecture and interior design. Designing Form, Shaping Life.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "STRATA Studio" }],
+      "Eco Architect AI is a Generative AI-powered urban planning assistant.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Eco Architect AI" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "STRATA — Architecture & Design Studio",
-    description: "Award-winning architecture and interior design. Designing Form, Shaping Life.",
+    title: "Eco Architect AI — Generative Urban Planning",
+    description: "Eco Architect AI is a Generative AI-powered urban planning assistant.",
     images: ["/og-image.png"],
   },
   robots: {

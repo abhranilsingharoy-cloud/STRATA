@@ -6,12 +6,12 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { href: '/studio', label: 'Studio', image: '/images/portrait_1.jpg' },
-  { href: '/services', label: 'Services', image: '/images/abstract_detail.jpg' },
-  { href: '/projects', label: 'Projects', image: '/images/exterior_hero.jpg' },
-  { href: '/journal', label: 'Journal', image: '/images/interior_kitchen.jpg' },
-  { href: '/team', label: 'Team', image: '/images/portrait_2.jpg' },
-  { href: '/contact', label: 'Contact', image: '/images/exterior_tower.jpg' },
+  { href: '/studio', label: 'Platform', image: '/images/eco_ai_hero.jpg' },
+  { href: '/services', label: 'Features', image: '/images/abstract_detail.jpg' },
+  { href: '/projects', label: 'Use Cases', image: '/images/exterior_hero.jpg' },
+  { href: '/journal', label: 'Research', image: '/images/interior_kitchen.jpg' },
+  { href: '/team', label: 'Company', image: '/images/portrait_2.jpg' },
+  { href: '/contact', label: 'Demo', image: '/images/exterior_tower.jpg' },
 ];
 
 export default function Header() {
@@ -54,18 +54,18 @@ export default function Header() {
         <Link
           href="/"
           className="absolute left-1/2 -translate-x-1/2 text-white font-display font-black text-xl tracking-widest uppercase"
-          aria-label="STRATA — Home"
+          aria-label="ECO.AI - Home"
         >
-          STRATA
+          ECO.AI
         </Link>
 
         {/* Right — CTA */}
         <Link
           href="/contact"
           className="hidden md:flex items-center h-[40px] bg-accent text-white text-xs font-semibold tracking-widest uppercase"
-          aria-label="Start a project with STRATA"
+          aria-label="Request an ECO.AI Demo"
         >
-          <span className="px-5">Start a Project</span>
+          <span className="px-5">Request Demo</span>
           <span className="flex items-center justify-center w-10 h-10 bg-black">
             <ArrowRight size={14} strokeWidth={2.5} />
           </span>
@@ -151,10 +151,10 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="flex items-center h-[48px] bg-accent text-white text-xs font-semibold tracking-widest uppercase"
+                className="flex items-center h-[48px] bg-accent text-white text-xs font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-colors"
               >
-                <span className="px-6">Start a Project</span>
-                <span className="flex items-center justify-center w-12 h-12 bg-black">
+                <span className="px-6">Request Demo</span>
+                <span className="flex items-center justify-center w-12 h-12 bg-black/20">
                   <ArrowRight size={14} />
                 </span>
               </Link>

@@ -9,27 +9,27 @@ import Button from '@/components/ui/Button';
 const services = [
   {
     icon: PenTool,
-    title: 'Architectural Design',
-    description: 'From site analysis to construction documents — we shape ideas into buildable form.',
-    href: '/services#architectural-design',
+    title: 'Green Space Optimization',
+    description: 'AI-driven placement of parks and green corridors to maximize ecological impact.',
+    href: '/services#green-space',
   },
   {
     icon: Home,
-    title: 'Interior Design',
-    description: 'Thoughtful interiors that balance aesthetics with the way people live and work.',
-    href: '/services#interior-design',
+    title: 'Flood & Drainage',
+    description: 'Predictive modeling to design resilient urban drainage and prevent flooding.',
+    href: '/services#flood-drainage',
   },
   {
     icon: Layers,
-    title: 'Concept & Masterplanning',
-    description: 'Strategic vision for sites at every scale — from single lots to entire districts.',
-    href: '/services#masterplanning',
+    title: 'Transport Planning',
+    description: 'Optimize public transit routes and road networks for reduced congestion.',
+    href: '/services#transport',
   },
   {
     icon: ClipboardList,
-    title: 'Project Management',
-    description: 'Expert oversight from groundbreaking through handover, on time and on budget.',
-    href: '/services#project-management',
+    title: 'Sustainable Zoning',
+    description: 'Generative land-use allocation balancing commercial, residential, and industrial zones.',
+    href: '/services#zoning',
   },
 ];
 
@@ -40,7 +40,7 @@ export default function ServicesGrid() {
     <section className="section-light py-24 md:py-36 px-6 md:px-20" aria-labelledby="services-heading">
       <div className="max-w-[1600px] mx-auto">
         {/* Kicker */}
-        <p className="kicker mb-4">[ Services ]</p>
+        <p className="kicker mb-4">[ Platform Features ]</p>
 
         {/* Oversized heading */}
         <h2
@@ -48,13 +48,13 @@ export default function ServicesGrid() {
           className="font-display font-black text-black uppercase leading-none mb-16 md:mb-20"
           style={{ fontSize: 'clamp(2.8rem, 7vw, 8rem)', letterSpacing: '-0.025em' }}
         >
-          <RevealText>EXCEPTIONAL</RevealText>
+          <RevealText>GENERATIVE</RevealText>
           <br />
-          <RevealText delay={0.1}>ARCHITECTURE</RevealText>
+          <RevealText delay={0.1}>AI-POWERED</RevealText>
           <br />
-          <RevealText delay={0.2}>&amp; DESIGN</RevealText>
+          <RevealText delay={0.2}>URBAN</RevealText>
           <br />
-          <RevealText delay={0.3}>SERVICES</RevealText>
+          <RevealText delay={0.3}>PLANNING</RevealText>
         </h2>
 
         {/* Bento grid — 2×2 with offset exactly like reference */}

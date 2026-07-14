@@ -50,7 +50,7 @@ export default function TeamGrid() {
             <Link
               href="/team"
               className="inline-flex items-center bg-white text-black text-xs font-semibold tracking-widest uppercase h-[52px]"
-              aria-label="Meet the STRATA team"
+              aria-label="Meet the ECO.AI team"
             >
               <span className="px-6">LEARN MORE</span>
               <span className="flex items-center justify-center w-[52px] h-[52px] bg-accent">
@@ -75,7 +75,7 @@ export default function TeamGrid() {
                   {/* Photo */}
                   <img
                     src={member.image}
-                    alt={`${member.name}, ${member.role} at STRATA Studio`}
+                    alt={`${member.name}, ${member.role} at ECO.AI Studio`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Arrow chip — white in top-right like screenshot 7 */}

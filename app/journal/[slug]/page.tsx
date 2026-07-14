@@ -16,7 +16,7 @@ const articles: Record<string, {
     body: [
       'The materials we choose to build with are not merely structural or aesthetic decisions — they are moral ones. As the construction industry accounts for nearly 40% of global carbon emissions, the specification of honest, low-carbon, and regionally-sourced materials has become the central design challenge of our generation.',
       'Cross-laminated timber (CLT) is perhaps the most significant shift we have seen in the past decade. Sequestering carbon throughout the life of the building while offering structural performance that rivals concrete, CLT is enabling a new typology of mid-rise timber construction that was unthinkable twenty years ago.',
-      'At STRATA, we have been integrating CLT into our residential and commercial projects since 2019. The material\'s warmth, its acoustic qualities, and the speed of construction it enables have consistently exceeded client expectations. But beyond performance, there is something profound about a building that can trace its materials back to a managed forest — a lineage that mass-produced concrete can never offer.',
+      'At ECO.AI, we have been integrating CLT into our residential and commercial projects since 2019. The material\'s warmth, its acoustic qualities, and the speed of construction it enables have consistently exceeded client expectations. But beyond performance, there is something profound about a building that can trace its materials back to a managed forest — a lineage that mass-produced concrete can never offer.',
       'Rammed earth is having a similar renaissance. Once dismissed as a vernacular technique unsuited to contemporary construction, advances in stabilisation technology and shuttering systems have made rammed earth viable at scale. Its thermal mass, its connection to the land, and its extraordinary visual quality — every wall is unique, every layer a record of geological time — make it one of the most compelling material choices available to contemporary architects.',
       'The challenge, of course, is cost and familiarity. Contractors who specialise in these materials are still relatively rare, and clients who have not seen them used well may be hesitant to specify them. Our role as architects is to bridge that gap — to demonstrate through built examples that sustainability and beauty are not in tension, but are in fact inseparable.',
     ],
@@ -130,7 +130,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               className="w-14 h-14 rounded-full object-cover flex-shrink-0" />
             <div>
               <p className="font-semibold text-black">{article.author}</p>
-              <p className="text-neutral-gray text-sm">{article.authorRole} — STRATA Studio</p>
+              <p className="text-neutral-gray text-sm">{article.authorRole} — ECO.AI Studio</p>
             </div>
           </div>
         </div>

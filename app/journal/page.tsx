@@ -6,7 +6,7 @@ import NewsletterForm from '@/components/ui/NewsletterForm';
 export const metadata: Metadata = {
   title: 'Journal — Design Insights & Architecture',
   description:
-    'Explore STRATA\'s journal of architecture insights, design process articles, sustainability features, and studio news.',
+    'Explore ECO.AI\'s journal of architecture insights, design process articles, sustainability features, and studio news.',
 };
 
 const articles = [
@@ -36,7 +36,7 @@ const articles = [
   },
   {
     title: 'Inside Our Process: From Concept Sketch to Built Form',
-    excerpt: 'A behind-the-scenes look at how STRATA moves from the first mark on paper to a completed building.',
+    excerpt: 'A behind-the-scenes look at how ECO.AI moves from the first mark on paper to a completed building.',
     slug: 'concept-to-built-form',
     image: '/images/exterior_hero.jpg',
     date: 'March 2025',

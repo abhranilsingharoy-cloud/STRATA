@@ -8,24 +8,24 @@ import Button from '@/components/ui/Button';
 
 const projects = [
   {
-    title: 'Cliffside Residence',
-    location: 'Big Sur, CA',
-    category: 'Residential',
-    slug: 'cliffside-residence',
+    title: 'Smart City Masterplan',
+    location: 'Singapore',
+    category: 'Urban Development',
+    slug: 'smart-city-masterplan',
     image: '/images/exterior_hero.jpg',
   },
   {
-    title: 'Meridian Tower',
-    location: 'Sydney, AU',
-    category: 'Commercial',
-    slug: 'meridian-tower',
+    title: 'Flood Resilience Zoning',
+    location: 'Miami, FL',
+    category: 'Infrastructure',
+    slug: 'flood-resilience',
     image: '/images/exterior_tower.jpg',
   },
   {
-    title: 'The Loft House',
-    location: 'Barcelona, ES',
-    category: 'Residential',
-    slug: 'loft-house-barcelona',
+    title: 'Eco-District Optimization',
+    location: 'Copenhagen, DK',
+    category: 'Sustainability',
+    slug: 'eco-district',
     image: '/images/exterior_villa.jpg',
   },
 ];
@@ -37,18 +37,18 @@ export default function FeaturedProjects() {
         {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
           <div>
-            <p className="kicker mb-3">[ Featured Projects ]</p>
+            <p className="kicker mb-3">[ Featured Use Cases ]</p>
             <h2
               id="projects-heading"
               className="font-display font-black text-black uppercase leading-none"
               style={{ fontSize: 'clamp(2rem, 4.5vw, 5rem)', letterSpacing: '-0.02em' }}
             >
-              <RevealText>RECENT WORK</RevealText>
+              <RevealText>GENERATED PLANS</RevealText>
             </h2>
           </div>
           <Button
             href="/projects"
-            label="View All Projects"
+            label="View All Use Cases"
             className="self-start sm:self-auto"
           />
         </div>

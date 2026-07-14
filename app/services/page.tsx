@@ -3,68 +3,68 @@ import Link from 'next/link';
 import { ArrowRight, PenTool, Home, Layers, ClipboardList } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Services — Architecture & Interior Design',
+  title: 'Features — Eco Architect AI',
   description:
-    'STRATA offers Architectural Design, Interior Design, Concept & Masterplanning, and Project Management. Explore our full range of architecture services.',
+    'Explore Eco Architect AI features: Green Space Optimization, Flood & Drainage Management, Transport Planning, and Sustainable Zoning.',
 };
 
 const services = [
   {
-    id: 'architectural-design',
+    id: 'green-space',
     icon: PenTool,
-    title: 'Architectural Design',
-    description: 'We approach every project as a unique opportunity — listening carefully, designing boldly, and delivering buildings that stand the test of time.',
-    deliverables: ['Site Analysis & Feasibility', 'Concept Sketches & Massing', '3D Visualization', 'Planning Applications', 'Construction Documentation', 'Material & Specification Schedules'],
+    title: 'Green Space Optimization',
+    description: 'AI-driven placement of parks, green corridors, and urban forests to maximize ecological impact and improve resident well-being.',
+    deliverables: ['Canopy Coverage Analysis', 'Urban Heat Island Mitigation', 'Biodiversity Corridors', 'Recreational Space Planning'],
     image: '/images/exterior_hero.jpg',
-    imageAlt: 'Architectural design process showing concept sketches and 3D models',
+    imageAlt: 'Green space optimization using satellite data',
   },
   {
-    id: 'interior-design',
+    id: 'flood-drainage',
     icon: Home,
-    title: 'Interior Design',
-    description: 'Thoughtful interiors that balance beauty with function. From material selections to lighting strategies, every detail is considered.',
-    deliverables: ['Space Planning & Layout', 'Material & Finish Palette', 'Furniture Specification', 'Lighting Design', 'Custom Joinery Design', 'Art & Accessories Curation'],
-    image: '/images/interior_living.jpg',
-    imageAlt: 'Interior design — architect-designed living space with glass walls and concrete finish',
+    title: 'Flood & Drainage Management',
+    description: 'Predictive modeling and topographic analysis to design resilient urban drainage systems and prevent flooding in high-risk zones.',
+    deliverables: ['Topographical Water Flow Maps', 'Stormwater Catchment Zones', 'Permeable Surface Allocation', 'Sea Level Rise Projections'],
+    image: '/images/exterior_villa.jpg',
+    imageAlt: 'Flood resilience modeling for urban coastal areas',
   },
   {
-    id: 'masterplanning',
+    id: 'transport',
     icon: Layers,
-    title: 'Concept & Masterplanning',
-    description: 'Strategic vision at every scale — from a single infill lot to a multi-hectare urban quarter. We shape places people want to live, work, and gather.',
-    deliverables: ['Urban Context Analysis', 'Zoning & Massing Strategy', 'Landscape Integration', 'Sustainability Framework', 'Phasing Plans', 'Stakeholder Consultation'],
+    title: 'Transport Planning',
+    description: 'Optimize public transit routes, pedestrian pathways, and road networks to reduce congestion and lower municipal carbon emissions.',
+    deliverables: ['Traffic Flow Simulation', 'Public Transit Catchment Analysis', 'Walkability Indexing', 'Bike Lane Integration'],
     image: '/images/exterior_tower.jpg',
-    imageAlt: 'Masterplanning concept for urban architecture development',
+    imageAlt: 'Transport planning and traffic flow simulation',
   },
   {
-    id: 'project-management',
+    id: 'zoning',
     icon: ClipboardList,
-    title: 'Project Management',
-    description: 'Expert oversight from groundbreaking through handover — coordinating contractors, consultants, and clients to ensure every project is delivered on time and on budget.',
-    deliverables: ['Contractor Procurement', 'Programme & Budget Control', 'Site Inspections', 'Quality Assurance', 'Risk Management', 'Defects Liability Oversight'],
-    image: '/images/interior_kitchen.jpg',
-    imageAlt: 'Project management — architect reviewing construction documents on site',
+    title: 'Sustainable Zoning',
+    description: 'Generative land-use allocation that perfectly balances commercial, residential, and industrial zones while adhering to local regulations.',
+    deliverables: ['Mixed-Use Density Mapping', 'Commercial Viability Analysis', 'Housing Capacity Projections', 'Regulatory Compliance Checking'],
+    image: '/images/interior_gallery.jpg',
+    imageAlt: 'Sustainable zoning maps and masterplan overlays',
   },
 ];
 
-export default function ServicesPage() {
+export default function FeaturesPage() {
   return (
     <>
       {/* Hero */}
       <section className="bg-[#0B0B0C] pt-[120px] pb-24 px-6 md:px-20">
         <div className="max-w-[1600px] mx-auto">
-          <p className="kicker text-white/50 mb-6">[ Services ]</p>
+          <p className="kicker text-white/50 mb-6">[ Features ]</p>
           <h1
             className="font-display font-black text-white uppercase leading-none"
             style={{ fontSize: 'clamp(3rem, 8vw, 10rem)', letterSpacing: '-0.03em' }}
           >
-            EXCEPTIONAL
+            INTELLIGENT
             <br />
-            ARCHITECTURE
+            URBAN
             <br />
-            &amp; DESIGN
+            PLANNING
             <br />
-            SERVICES
+            TOOLS
           </h1>
         </div>
       </section>
@@ -106,7 +106,7 @@ export default function ServicesPage() {
                 </p>
                 {/* Deliverables list */}
                 <div className={`border-t ${borderColor} pt-8`}>
-                  <p className={`kicker ${mutedColor} mb-5`}>Deliverables include:</p>
+                  <p className={`kicker ${mutedColor} mb-5`}>Capabilities include:</p>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {service.deliverables.map((d) => (
                       <li key={d} className="flex items-center gap-2">
@@ -120,7 +120,7 @@ export default function ServicesPage() {
                   href="/contact"
                   className="mt-10 inline-flex items-center bg-accent text-white text-xs font-semibold tracking-widest uppercase h-[52px]"
                 >
-                  <span className="px-6">Enquire About This Service</span>
+                  <span className="px-6">Explore This Feature</span>
                   <span className="flex items-center justify-center w-[52px] h-[52px] bg-black">
                     <ArrowRight size={16} strokeWidth={2.5} color="#fff" />
                   </span>
@@ -132,7 +132,7 @@ export default function ServicesPage() {
                 <img
                   src={service.image}
                   alt={service.imageAlt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale opacity-90"
                 />
               </div>
             </div>
@@ -143,13 +143,13 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="bg-accent py-20 px-6 md:px-20 text-center">
         <p className="font-display font-black text-white uppercase text-2xl md:text-4xl mb-6">
-          Ready to Start Your Project?
+          Ready to Start Planning?
         </p>
         <Link
           href="/contact"
           className="inline-flex items-center bg-black text-white text-xs font-semibold tracking-widest uppercase h-[52px]"
         >
-          <span className="px-8">Book a Consultation</span>
+          <span className="px-8">Request a Demo</span>
           <span className="flex items-center justify-center w-[52px] h-[52px] bg-white">
             <ArrowRight size={16} strokeWidth={2.5} color="#000" />
           </span>
