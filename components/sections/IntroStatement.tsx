@@ -53,12 +53,12 @@ export default function IntroStatement() {
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-white font-body text-base leading-relaxed mb-10 max-w-[300px]">
+          <div className="text-white font-body text-base leading-relaxed mb-10 max-w-[300px]">
             <RevealText>We craft inspiring spaces that blend</RevealText>{' '}
             <RevealText delay={0.1}>cutting-edge design with enduring</RevealText>{' '}
             <RevealText delay={0.2}>functionality, turning your vision</RevealText>{' '}
             <RevealText delay={0.3}>into reality.</RevealText>
-          </p>
+          </div>
           <Button
             href="/contact"
             label="CONTACT"
