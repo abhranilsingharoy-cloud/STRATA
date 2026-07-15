@@ -69,8 +69,8 @@ export default function ServicesGrid() {
           </motion.div>
         </div>
 
-        {/* Bento grid — 2×2 layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Bento grid — 2×2 with offset exactly like reference */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
           {services.map((service, i) => {
             const Icon = service.icon;
             // Alternate vertical offset on even cards to create bento stagger
@@ -78,39 +78,31 @@ export default function ServicesGrid() {
             return (
               <motion.div
                 key={service.title}
-                className={`group relative bg-black p-10 md:p-12 flex flex-col border border-white/10 shadow-lg rounded-3xl overflow-hidden ${
-                  isOffset ? 'mt-0 md:mt-16' : ''
+                className={`relative bg-[#EBEBEB] p-8 flex flex-col border border-white ${
+                  isOffset ? 'mt-0 lg:mt-16' : ''
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               >
-                {/* Background Image */}
-                <div className="absolute inset-0 z-0 pointer-events-none">
-                  <img src={`/images/${service.href.split('#')[1]}.jpg`} alt={service.title} className="w-full h-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                </div>
-
                 {/* Top row: icon + arrow chip */}
-                <div className="relative z-10 flex justify-between items-start mb-24 md:mb-32">
-                  <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-sm">
-                    <Icon size={32} strokeWidth={1.5} className="text-white" aria-hidden="true" />
-                  </div>
+                <div className="flex justify-between items-start mb-auto">
+                  <Icon size={28} strokeWidth={1.5} className="text-black" aria-hidden="true" />
                   <Button
                     variant="chip-only"
                     href={service.href}
                     ariaLabel={`Learn more about ${service.title}`}
-                    className="flex-shrink-0 bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white hover:text-black transition-colors"
+                    className="flex-shrink-0"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 mt-auto">
-                  <h3 className="font-display font-bold text-white text-2xl md:text-3xl mb-4 tracking-tight">
+                <div className="mt-12">
+                  <h3 className="font-body font-semibold text-black text-lg mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-neutral-300 text-base md:text-lg leading-relaxed max-w-[95%]">{service.description}</p>
+                  <p className="text-neutral-gray text-sm leading-relaxed">{service.description}</p>
                 </div>
               </motion.div>
             );
