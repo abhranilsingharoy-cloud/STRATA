@@ -45,15 +45,26 @@ export default function IntroStatement() {
           </h2>
         </motion.div>
 
-        {/* Right panel: orange, subcopy + CTA */}
+        {/* Right panel: image background, subcopy + CTA */}
         <motion.div
-          className="hidden md:flex flex-col justify-end w-[48%] bg-accent p-10 md:p-16"
+          className="relative hidden md:flex flex-col justify-end w-[48%] overflow-hidden p-10 md:p-16"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="text-white font-body text-base leading-relaxed mb-10 max-w-[300px]">
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <ParallaxImage
+              src="/images/sustainable_city_panel.jpg"
+              alt="Sustainable city rendering"
+              className="w-full h-full object-cover object-center"
+              scale={1.1}
+              speed={0.2}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+          </div>
+
+          <div className="relative z-10 text-white font-body text-base leading-relaxed mb-10 max-w-[300px]">
             <RevealText>Eco Architect AI is an urban</RevealText>{' '}
             <RevealText delay={0.1}>planning assistant that analyzes</RevealText>{' '}
             <RevealText delay={0.2}>satellite imagery to generate customized,</RevealText>{' '}
@@ -68,14 +79,21 @@ export default function IntroStatement() {
       </div>
 
       {/* Mobile CTA below panels */}
-      <div className="md:hidden bg-accent p-8">
-        <p className="text-white text-sm leading-relaxed mb-6">
-          Eco Architect AI is an urban planning assistant that analyzes satellite imagery to generate customized, data-driven planning recommendations.
-        </p>
-        <Button
-          href="/contact"
-          label="EXPLORE PLATFORM"
-        />
+      <div className="md:hidden relative overflow-hidden p-8">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <img src="/images/sustainable_city_panel.jpg" alt="Sustainable city rendering" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="relative z-10">
+          <p className="text-white text-sm leading-relaxed mb-6">
+            Eco Architect AI is an urban planning assistant that analyzes satellite imagery to generate customized, data-driven planning recommendations.
+          </p>
+          <Button
+            href="/contact"
+            label="EXPLORE PLATFORM"
+            className="bg-white text-black"
+          />
+        </div>
       </div>
     </section>
   );
