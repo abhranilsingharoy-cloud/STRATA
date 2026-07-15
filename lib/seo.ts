@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://strata.studio';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://Eco Architect AI.studio';
 
 interface SEOProps {
   title: string;
@@ -23,7 +23,7 @@ export function generateSEO({ title, description, path = '', image }: SEOProps):
       url,
       title,
       description,
-      siteName: 'STRATA Studio',
+      siteName: 'Eco Architect AI Studio',
       images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: {

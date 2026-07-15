@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
 
     // In production: send via nodemailer / Resend / SendGrid
     // For now, log and return success so the form works end-to-end
-    console.log('[STRATA Contact]', data);
+    console.log('[Eco Architect AI Contact]', data);
 
     // Optional: real email sending
     // const transporter = nodemailer.createTransport({ ... });
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     if (err instanceof z.ZodError) {
       return NextResponse.json({ error: 'Validation failed', issues: err.issues }, { status: 422 });
     }
-    console.error('[STRATA Contact Error]', err);
+    console.error('[Eco Architect AI Contact Error]', err);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

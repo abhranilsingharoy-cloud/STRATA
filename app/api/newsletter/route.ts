@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     const { email } = schema.parse(body);
 
     // In production: add to Mailchimp / ConvertKit / Klaviyo list
-    console.log('[STRATA Newsletter] New subscriber:', email);
+    console.log('[Eco Architect AI Newsletter] New subscriber:', email);
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://strata.studio';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://Eco Architect AI.studio';
 
 const projectSlugs = [
   'cliffside-residence', 'meridian-tower', 'loft-house-barcelona',

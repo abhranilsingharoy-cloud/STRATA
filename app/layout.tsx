@@ -4,10 +4,6 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import GridLines from "@/components/ui/GridLines";
-import CustomCursor from "@/components/ui/Cursor";
-import Preloader from "@/components/ui/Preloader";
-import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
-
 const archivoBlack = Archivo_Black({
   weight: "400",
   subsets: ["latin"],
@@ -63,14 +59,10 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <SmoothScrollProvider>
-          <Preloader />
           <GridLines />
-          <CustomCursor />
           <Header />
           <main id="main-content">{children}</main>
           <Footer />
-        </SmoothScrollProvider>
       </body>
     </html>
   );
