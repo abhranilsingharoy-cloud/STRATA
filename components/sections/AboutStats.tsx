@@ -3,7 +3,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-const stats = [
+type Stat = {
+  value: number;
+  suffix: string;
+  label: string;
+  prefix?: string;
+};
+
+const stats: Stat[] = [
   { value: 10, suffix: 'M+', label: 'Acres Analyzed' },
   { value: 50, suffix: '+', label: 'Cities Planned' },
   { value: 15, suffix: '%', label: 'Carbon Reduction' },
