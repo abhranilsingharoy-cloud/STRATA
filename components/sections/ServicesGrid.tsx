@@ -42,20 +42,32 @@ export default function ServicesGrid() {
         {/* Kicker */}
         <p className="kicker mb-4">[ Platform Features ]</p>
 
-        {/* Oversized heading */}
-        <h2
-          id="services-heading"
-          className="font-display font-black text-black uppercase leading-none mb-16 md:mb-20"
-          style={{ fontSize: 'clamp(2.8rem, 7vw, 8rem)', letterSpacing: '-0.025em' }}
-        >
-          <RevealText>GENERATIVE</RevealText>
-          <br />
-          <RevealText delay={0.1}>AI-POWERED</RevealText>
-          <br />
-          <RevealText delay={0.2}>URBAN</RevealText>
-          <br />
-          <RevealText delay={0.3}>PLANNING</RevealText>
-        </h2>
+        {/* Oversized heading and Feature Image */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 mb-16 md:mb-20 items-end">
+          <h2
+            id="services-heading"
+            className="font-display font-black text-black uppercase leading-none lg:w-1/2"
+            style={{ fontSize: 'clamp(2.8rem, 7vw, 8rem)', letterSpacing: '-0.025em' }}
+          >
+            <RevealText>GENERATIVE</RevealText>
+            <br />
+            <RevealText delay={0.1}>AI-POWERED</RevealText>
+            <br />
+            <RevealText delay={0.2}>URBAN</RevealText>
+            <br />
+            <RevealText delay={0.3}>PLANNING</RevealText>
+          </h2>
+
+          <motion.div 
+            className="w-full lg:w-1/2 h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+             <img src="/images/urban_planning_features.jpg" alt="Generative urban planning features" className="w-full h-full object-cover object-center" />
+          </motion.div>
+        </div>
 
         {/* Bento grid — 2×2 with offset exactly like reference */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
