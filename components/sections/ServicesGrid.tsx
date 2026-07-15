@@ -70,7 +70,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* Bento grid — 2×2 with offset exactly like reference */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, i) => {
             const Icon = service.icon;
             // Alternate vertical offset on even cards to create bento stagger
@@ -78,7 +78,7 @@ export default function ServicesGrid() {
             return (
               <motion.div
                 key={service.title}
-                className={`relative bg-[#EBEBEB] p-8 flex flex-col border border-white ${
+                className={`relative bg-[#F4F4F5] p-10 lg:p-14 flex flex-col border border-white/60 shadow-sm rounded-2xl ${
                   isOffset ? 'mt-0 lg:mt-16' : ''
                 }`}
                 initial={{ opacity: 0, y: 30 }}
@@ -88,21 +88,23 @@ export default function ServicesGrid() {
               >
                 {/* Top row: icon + arrow chip */}
                 <div className="flex justify-between items-start mb-auto">
-                  <Icon size={28} strokeWidth={1.5} className="text-black" aria-hidden="true" />
+                  <div className="bg-white p-3 rounded-xl shadow-sm">
+                    <Icon size={28} strokeWidth={1.5} className="text-black" aria-hidden="true" />
+                  </div>
                   <Button
                     variant="chip-only"
                     href={service.href}
                     ariaLabel={`Learn more about ${service.title}`}
-                    className="flex-shrink-0"
+                    className="flex-shrink-0 bg-white"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="mt-12">
-                  <h3 className="font-body font-semibold text-black text-lg mb-3">
+                <div className="mt-20">
+                  <h3 className="font-display font-bold text-black text-2xl lg:text-3xl mb-4 tracking-tight">
                     {service.title}
                   </h3>
-                  <p className="text-neutral-gray text-sm leading-relaxed">{service.description}</p>
+                  <p className="text-neutral-600 text-base lg:text-lg leading-relaxed">{service.description}</p>
                 </div>
               </motion.div>
             );
